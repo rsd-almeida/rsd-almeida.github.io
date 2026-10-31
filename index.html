@@ -134,13 +134,10 @@ a { color:inherit; text-decoration:none }
   position:relative;
   overflow:hidden;
 }
-.portrait:before,.portrait:after {
-  content:"";
-  position:absolute;
-  border:1px solid rgba(232,217,197,.16);
-  border-radius:50%;
-  width:290px;
-  height:290px;
+.portrait:before,
+.portrait:after {
+  display: none;
+}
 }
 .portrait:after { width:390px; height:390px }
 .portrait-placeholder { position:relative; z-index:1; color:#e0cbb4 }
