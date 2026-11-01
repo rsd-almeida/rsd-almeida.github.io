@@ -265,6 +265,49 @@ a { color:inherit; text-decoration:none }
   .hero h1 { font-size:2.75rem }
   .section { padding-top:75px; padding-bottom:75px }
 }
+  /* Modal Window */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(36, 24, 17, 0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: var(--cream);
+  color: var(--ink);
+  width: 100%;
+  max-width: 750px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 35px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.modal-content h2 {
+  color: var(--espresso);
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  line-height: 1.7;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: var(--brown);
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -338,12 +381,11 @@ a { color:inherit; text-decoration:none }
   <div class="section-inner">
     <p class="section-kicker">02 / Selected Projects</p>
     <h2>My Work.</h2>
-    <p class="lead">A selection of academic and personal projects. Replace these examples with your own work, screenshots, source-code links, and project documentation.</p>
     <div class="project-grid">
-      <article class="project">
-        <h3>Artifact 1</h3>
-        <p>Training my Chatbot</p>
-      </article>
+      <article class="project" onclick="openModal()" style="cursor:pointer;">
+  <h3>Artifact 1</h3>
+  <p>Training my Chatbot</p>
+</article>
       <article class="project">
         <h3>Artifact 2</h3>
         <p>Unavailable</p>
@@ -385,6 +427,40 @@ a { color:inherit; text-decoration:none }
 <footer class="footer">
   © Ryan Almeida · Personal Portfolio
 </footer>
+<!-- Artifact 1 Modal -->
+<div id="artifactModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
 
+    <h2>Training My Chatbot</h2>
+
+    <p>
+      Write your chatbot assignment description here.
+      You can explain the purpose of the project, the tools
+      you used, and what you learned.
+    </p>
+
+    <h3>Project Screenshots</h3>
+
+    <!-- Add your screenshots here -->
+  </div>
+</div>
+  <script>
+function openModal() {
+  document.getElementById("artifactModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("artifactModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("artifactModal");
+
+  if (event.target === modal) {
+    closeModal();
+  }
+};
+</script>
 </body>
 </html>
