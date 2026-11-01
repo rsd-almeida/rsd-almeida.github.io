@@ -381,27 +381,34 @@ a { color:inherit; text-decoration:none }
   <div class="section-inner">
     <p class="section-kicker">02 / Selected Projects</p>
     <h2>My Work.</h2>
+
     <div class="project-grid">
-      <article class="project" onclick="openModal()" style="cursor:pointer;">
-  <h3>Artifact 1</h3>
-  <p>Training my Chatbot</p>
-</article>
-      <article class="project">
+
+      <article class="project" onclick="openModal('artifactModal1')" style="cursor:pointer;">
+        <h3>Artifact 1</h3>
+        <p>Training my Chatbot</p>
+      </article>
+
+      <article class="project" onclick="openModal('artifactModal2')" style="cursor:pointer;">
         <h3>Artifact 2</h3>
         <p>Unavailable</p>
       </article>
-      <article class="project">
+
+      <article class="project" onclick="openModal('artifactModal3')" style="cursor:pointer;">
         <h3>Artifact 3</h3>
         <p>Unavailable</p>
       </article>
-      <article class="project">
+
+      <article class="project" onclick="openModal('artifactModal4')" style="cursor:pointer;">
         <h3>Artifact 4</h3>
         <p>Unavailable</p>
       </article>
-      <article class="project">
+
+      <article class="project" onclick="openModal('artifactModal5')" style="cursor:pointer;">
         <h3>Artifact 5</h3>
         <p>Unavailable</p>
       </article>
+
     </div>
   </div>
 </section>
@@ -446,19 +453,17 @@ a { color:inherit; text-decoration:none }
   </div>
 </div>
   <script>
-function openModal() {
-  document.getElementById("artifactModal").style.display = "flex";
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = "flex";
 }
 
-function closeModal() {
-  document.getElementById("artifactModal").style.display = "none";
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
 }
 
 window.onclick = function(event) {
-  const modal = document.getElementById("artifactModal");
-
-  if (event.target === modal) {
-    closeModal();
+  if (event.target.classList.contains("modal")) {
+    event.target.style.display = "none";
   }
 };
 </script>
