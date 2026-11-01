@@ -264,7 +264,7 @@ a { color:inherit; text-decoration:none }
   .hero h1 { font-size:2.75rem }
   .section { padding-top:75px; padding-bottom:75px }
 }
-  /* Modal Window */
+/* Modal Window */
 .modal {
   display: none;
   position: fixed;
@@ -275,7 +275,6 @@ a { color:inherit; text-decoration:none }
   align-items: center;
   padding: 20px;
 }
-
 .modal-content {
   background: var(--cream);
   color: var(--ink);
@@ -287,16 +286,13 @@ a { color:inherit; text-decoration:none }
   border-radius: 18px;
   position: relative;
 }
-
 .modal-content h2 {
   color: var(--espresso);
   margin-bottom: 20px;
 }
-
 .modal-content p {
   line-height: 1.7;
 }
-
 .modal-close {
   position: absolute;
   top: 15px;
@@ -314,11 +310,12 @@ a { color:inherit; text-decoration:none }
 <header class="topbar">
   <a class="brand" href="#home">Ryan Almeida</a>
   <nav class="nav" aria-label="Main navigation">
-  <a href="#about">About</a>
-  <a href="#purpose-goals">Purpose and Goals</a>
-  <a href="#work">My Work</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <a href="#about">About</a>
+    <a href="#purpose-goals">Purpose and Goals</a>
+    <a href="#about">Background and Interests</a>
+    <a href="#work">My Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <main>
@@ -327,7 +324,7 @@ a { color:inherit; text-decoration:none }
     <div>
       <div class="eyebrow">IT Professional · Computer Information Systems · AI</div>
       <h1>Hi, <br><span>I'm Ryan Almeida.</span></h1>
-      <p class="hero-copy"> An IT professional and graduate student interested in software development, backend systems, and practical applications of artificial intelligence.</p>
+      <p class="hero-copy">An IT professional and graduate student interested in software development, backend systems, and practical applications of artificial intelligence.</p>
       <div class="hero-actions">
         <a class="pill primary" href="#about">About</a>
         <a class="pill secondary" href="#work">My Work</a>
@@ -335,10 +332,10 @@ a { color:inherit; text-decoration:none }
       </div>
     </div>
     <div class="portrait">
-  <img src="IMG_8475.jpg" alt="Ryan Almeida"
-       style="width:100%;height:100%;object-fit:cover;
-       position:absolute;inset:0;border-radius:18px;">
-</div>
+      <img src="IMG_8475.jpg" alt="Ryan Almeida"
+           style="width:100%;height:100%;object-fit:cover;
+           position:absolute;inset:0;border-radius:18px;">
+    </div>
   </div>
 </section>
 
@@ -350,15 +347,15 @@ a { color:inherit; text-decoration:none }
     </div>
     <div>
       <p class="lead">This portfolio is intended for professors, peers, and employers. It highlights my problem-solving approach, troubleshooting skills, and technical decision-making.</p>
-       <p class="lead">I am a results-driven healthcare IT professional looking to transition into a development-focused career, with the goal of using artificial intelligence to create innovative solutions and positively impact people's lives.</p>
+      <p class="lead">I am a results-driven healthcare IT professional looking to transition into a development-focused career, with the goal of using artificial intelligence to create innovative solutions and positively impact people's lives.</p>
     </div>
   </div>
 </section>
 
 <section class="section about" id="about">
   <div class="section-inner">
-    <p class="section-kicker">01 / About</p>
-    <h2>My background and direction.</h2>
+    <p class="section-kicker">02 / Background and Interests</p>
+    <h2>My Background and Interests.</h2>
     <div class="about-grid">
       <article class="info-card">
         <h3>Education</h3>
@@ -379,9 +376,8 @@ a { color:inherit; text-decoration:none }
 
 <section class="section work" id="work">
   <div class="section-inner">
-    <p class="section-kicker">02 / Selected Projects</p>
+    <p class="section-kicker">03 / Selected Projects</p>
     <h2>My Work.</h2>
-
     <div class="project-grid">
 
       <article class="project" onclick="openModal('artifactModal1')" style="cursor:pointer;">
@@ -417,13 +413,13 @@ a { color:inherit; text-decoration:none }
   <div class="section-inner">
     <div class="contact-panel">
       <div>
-        <p class="section-kicker">03 / Contact</p>
+        <p class="section-kicker">04 / Contact</p>
         <h2>Let's connect.</h2>
         <p>I'm always interested in connecting with people in technology, learning about new opportunities, and discussing projects. Add your preferred contact details and professional profiles.</p>
       </div>
       <div class="contact-links">
-  <a href="mailto:ryans.almeida@icloud.com">Email me</a>
-</div>
+        <a href="mailto:ryan.silvadealmeida@myemail.indwes.edu">Email me</a>
+      </div>
     </div>
   </div>
 </section>
@@ -437,17 +433,13 @@ a { color:inherit; text-decoration:none }
 <div id="artifactModal1" class="modal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal('artifactModal1')">&times;</button>
-
     <h2>Training My Chatbot</h2>
-
     <p>
       Write your chatbot assignment description here.
       You can explain the purpose of the project, the tools
       you used, and what you learned.
     </p>
-
     <h3>Project Screenshots</h3>
-
     <!-- Add your screenshots here -->
   </div>
 </div>
@@ -492,7 +484,6 @@ a { color:inherit; text-decoration:none }
   </div>
 </div>
 
-  
 <script>
 function openModal(modalId) {
   document.getElementById(modalId).style.display = "flex";
