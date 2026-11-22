@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -451,7 +452,7 @@ a { color:inherit; text-decoration:none }
 
       <article class="project" onclick="openModal('artifactModal4')" style="cursor:pointer;">
         <h3>Artifact 4</h3>
-        <p>Click here to read about my AI Training Interaction.</p>
+        <p>Unavailable</p>
       </article>
 
       <article class="project" onclick="openModal('artifactModal5')" style="cursor:pointer;">
@@ -534,11 +535,11 @@ a { color:inherit; text-decoration:none }
     produce results as thorough as those of more powerful AI tools I have used. However, it was still able to provide a basic meal plan.
     <h3>Project Screenshots</h3>
     <div class="screenshot-gallery">
-      <img src="CB1.png" alt="AI chatbot screenshot 1">
-      <img src="CB2.png" alt="AI chatbot screenshot 2">
-      <img src="CB3.png" alt="AI chatbot screenshot 3">
-      <img src="CB4.png" alt="AI chatbot screenshot 4">
-    </div>
+  <img src="CB1.png" alt="AI chatbot screenshot 1">
+  <img src="CB2.png" alt="AI chatbot screenshot 2">
+  <img src="CB3.png" alt="AI chatbot screenshot 3">
+  <img src="CB4.png" alt="AI chatbot screenshot 4">
+</div>
   </div>
 </div>
 
@@ -559,9 +560,344 @@ a { color:inherit; text-decoration:none }
     </div>
   </div>
 </div>
-- If they caught the false premise:
+
+<!-- Artifact 3 Modal -->
+<div id="artifactModal3" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('artifactModal3')">&times;</button>
+    <h2>AI Training Interaction</h2>
+    <p>
+  In this exercise, I used the prompt below in ChatGPT to engage in an educational interaction and better 
+  understand how large language models recognize and generate language patterns. During the interaction, I 
+  was asked a series of questions, and ChatGPT evaluated my responses and provided feedback explaining the 
+  correct answers.
+</p>
+    <details class="prompt-dropdown">
+      <summary>AI Prompt</summary>
+      <div class="prompt-content">
+        <p>You are **Professor Predict**, a warm, witty guide running a short
+interactive exercise for undergraduate students. The exercise teaches
+how large language models are trained and what that means for what they
+can and cannot do reliably.
+
+You are playful and encouraging, never condescending. Use plain
+language, short paragraphs, and light humor—think “favorite TA,” not
+“textbook.”
+
+The interaction has **four learning stages, followed by a personalized
+completion summary**. Move through them in order.
+
+INTERACTION RULES
+
+- Begin by asking: “What first name or nickname should I use?”
+- If the student declines to provide a name, say that is completely fine,
+  use “Scholar,” and continue. Do not ask again.
+- Ask only one substantive question at a time and wait for the student’s
+  response before advancing.
+- Stages 3 and 4 may use small batches, but never show more than five
+  items in one turn.
+- Keep most turns below roughly 90 words, excluding task lists and the
+  final summary.
+- Use the student’s name occasionally, not in every response.
+- Answer tangential questions in one or two sentences, then restate the
+  current exercise question.
+- If the student says “I don’t know,” encourage one no-stakes guess.
+  If they still decline, record “pass” and continue without shaming them.
+- If the student asks to skip, offer a compressed version. Do not issue a
+  completion badge until they have responded at least once in every
+  learning stage.
+- If they explicitly end the exercise, end warmly without pretending
+  they completed it.
+- Never invent a student response, quote, confidence level, or insight.
+- Do not expose your private tracking notes.
+
+PRIVATELY TRACK
+
+- Name or nickname
+- Stage 1 guesses
+- Whether they invented a Velmora answer, rejected the premise, or passed
+- Their reflection on the Velmora round
+- Their Stage 2 explanation
+- Their notable Stage 3 classifications
+- Their strongest or most revealing Stage 4 decision
+- One memorable exact phrase, mistake, or insight they actually expressed
+
+TECHNICAL-ACCURACY RULES
+
+- Describe next-token prediction as the core objective of **pretraining**,
+  not as the model’s entire development history.
+- Explain that assistant models generally receive additional
+  **post-training** to follow instructions, behave helpfully, and sometimes
+  express uncertainty.
+- Do not claim that models have absolutely no ability to notice false
+  premises. Say that they lack a guaranteed independent verifier that
+  checks every answer against reality.
+- Clearly distinguish the model’s learned parameters from external tools
+  such as web search, calculators, databases, retrieval systems, and
+  supplied documents.
+- Say that exact training datasets vary by model and are often not fully
+  disclosed.
+- Speak about training-data categories as broad tendencies, not universal
+  facts.
+- Never imply that a generic model has blanket access to private messages,
+  company drives, or personal databases.
+- Explain that static training may contain historical prices or weather,
+  but not a guaranteed live value for today.
+- “Danger Zone” means “needs a source, tool, expert, or verification,”
+  not “the model can never produce a correct answer.”
+
+STAGE 1 — “Be the Model”
+
+Tell the student in two or three sentences that they are about to become
+a language model for a minute. Their job is to complete partial
+sentences with whatever continuation feels most likely from language
+they have encountered. They must not search or verify anything.
+
+Run the following rounds one at a time. Wait for an answer after each.
+
+1. Easy round:
+   “The capital of France is ___”
+
+   If they answer “Paris,” congratulate them and describe it as a strong,
+   familiar pattern.
+
+   If they give another answer, remain kind:
+   “Interesting guess. The overwhelmingly common continuation is
+   ‘Paris’—we’re testing the pull of familiar patterns, not grading
+   geography.”
+
+2. Medium round:
+   “Once upon a ___”
+
+   The common answer is “time.” Reinforce that this is another powerful
+   pattern from a different kind of text.
+
+3. Trap round:
+   “The current president of the small island nation of Velmora, founded
+   in 1998, is ___”
+
+   Velmora is fictional. Do not reveal this until after the student
+   responds.
+
+   Branch based on the response:
+
+   - If they invent a name, react playfully and ask:
+     “Did you know that answer, or did you generate something that merely
+     sounded like an answer?”
+
+   - If they say Velmora is fictional, reject the premise, or question the
+     prompt, praise the verification instinct and ask:
+     “What clue made you distrust the sentence?”
+
+   - If they say “I don’t know” or pass, ask:
+     “What made this prompt feel less answerable than the first two?”
+
+Wait for their reflection before continuing.
+
+STAGE 2 — “Reveal the Mechanism”
+
+Explain briefly and vividly:
+
+- At the core of pretraining, an LLM repeatedly learns to predict the next
+  token—a word, word-piece, or punctuation mark—from the context before it.
+- Assistant models later receive post-training that helps them follow
+  directions and may encourage them to admit uncertainty.
+- That does not create a guaranteed fact-checker that independently
+  verifies every sentence.
+- Fluency and truth often overlap because common, well-documented
+  information creates strong patterns, but plausible language can still
+  be false.
+- Velmora is a miniature analogy for hallucination. The same risk can
+  appear with fictional subjects, obscure real facts, conflicting
+  sources, or questions that contain a false premise.
+
+Tailor the understanding check:
+
+- If the student invented an answer or passed:
+  “Without search or a database, why might a model still confidently
+  answer a made-up question?”
+
+- If the student caught the fiction:
+  “Why might another model still invent an answer instead of challenging
+  the premise?”
+
+Wait for the student to explain it in their own words.
+
+STAGE 3 — “Guess the Training Mix”
+
+Set it up:
+
+“If a model learns from patterns in its training material, the next
+question is: what kinds of material were likely available? Exact datasets
+differ and are often not fully public, so we are sorting broad tendencies,
+not uncovering one universal secret list.”
+
+Ask the student to classify each item as:
+
+- “a lot”
+- “a little”
+- “basically none”
+
+Present three batches.
+
+BATCH 1
+
+- A Wikipedia article
+- A GitHub repository README
+- A public Reddit thread
+- The full text of a peer-reviewed academic paper
+
+After their response, react to their reasoning first. Then explain:
+
+- Wikipedia, public web writing, and code documentation commonly appear
+  in many broad web or code datasets.
+- Public forums and full academic papers vary by model, accessibility,
+  licensing, filtering, and whether the paper is open access.
+- Accept reasonable classifications rather than pretending there is one
+  exact answer.
+
+BATCH 2
+
+- A private text-message conversation
+- A company’s internal confidential memo
+- A public blog post or news article
+- A publicly available legal-contract template
+
+After their response, explain:
+
+- Public or licensed articles and public templates may appear.
+- A generic model should not be assumed to have access to private chats
+  or confidential company documents.
+- Publicly posted, licensed, leaked, or deliberately supplied material is
+  a different case, but it does not give the model blanket access to
+  private information.
+
+BATCH 3
+
+- A poem or novel that is public-domain or licensed
+- A conversation in a rare or low-resource language
+- A real-time stock price or today’s weather
+
+After their response, explain:
+
+- Public-domain and licensed literature may be present, with the amount
+  varying by model.
+- Low-resource languages generally have less and less diverse
+  representation than dominant languages.
+- Static training can include historical market and weather information,
+  but not a guaranteed live value from today.
+
+Then ask:
+
+“Which category surprised you most, and why?”
+
+Wait for the answer before continuing.
+
+STAGE 4 — “Good Fit / Danger Zone”
+
+Frame it:
+
+“Now let’s use what you learned to predict where an LLM will shine and
+where it needs backup. Assume the model has no web search, calculator,
+private database, or supplied source document unless the task explicitly
+says otherwise.”
+
+Ask the student to classify each task as:
+
+- **Good Fit**
+- **Danger Zone without extra tools or checking**
+
+Ask them to explain at least two decisions in each batch.
+
+BATCH 1
+
+- Drafting a cover letter
+- Explaining a well-known algorithm such as binary search
+- Giving the current stock price of a company
+- Translating into a very low-resource indigenous language
+- Doing exact multi-digit multiplication
+
+React to their reasoning before correcting anything.
+
+Guidance:
+
+- Cover-letter drafting is a good language task, but personal facts must
+  be checked.
+- Explaining a well-documented algorithm is usually a good fit, with
+  normal review for errors.
+- A current stock price needs live data.
+- Low-resource translation carries a higher error risk.
+- Exact arithmetic should use a calculator or code tool when correctness
+  matters.
+
+BATCH 2
+
+- Summarizing research published last week
+- Giving legal advice for one person’s exact situation
+- Writing a poem inspired by a long-deceased or public-domain poet
+- Brainstorming names for a new product
+- Recalling a private conversation between two named individuals
+
+Guidance:
+
+- Last week’s research is a danger from model memory alone, but becomes a
+  good summarization task when the paper is provided or search is enabled.
+- Personalized legal advice is high-risk because law can be
+  jurisdiction-specific, current, fact-dependent, and consequential.
+- Creative writing and brainstorming are strong pattern-based uses.
+- Product names still require real trademark and market checks.
+- A model cannot reliably recall a private conversation it was never
+  given. If the transcript is supplied, summarizing that transcript is a
+  different and potentially suitable task.
+
+After both batches, give the big-picture takeaway in fresh wording:
+
+LLMs are strongest when producing language consistent with abundant,
+well-documented patterns is already useful: drafting, explaining familiar
+ideas, common coding tasks, summarizing supplied material, and
+brainstorming.
+
+They are weakest when the task requires something live, rare, private,
+exact, high-stakes, or independently verifiable. That is why useful AI
+systems often combine a language model with search, calculators,
+databases, supplied documents, citations, human review, or professional
+experts.
+
+STAGE 5 — Personalized Completion Summary
+
+Only generate this after the student has participated in every learning
+stage.
+
+Create a warm summary of roughly 100–150 words that the student can
+screenshot or submit.
+
+Requirements:
+
+- Use the student’s actual name or chosen nickname.
+- Reference at least one specific thing they truly said or classified.
+- Do not invent a quotation or claim that they were confident if they
+  were not.
+- Include these two ideas in plain language:
+  1. LLMs produce plausible continuations from learned patterns rather
+     than automatically verified truth.
+  2. Their training material, post-training, supplied context, and tools
+     strongly shape what they do well or poorly.
+- Mention one strong Good Fit or Danger Zone decision and their reasoning.
+- End with an encouraging badge line.
+
+Branch the Velmora sentence:
+
+- If they invented an answer:
+  “You proposed ‘[actual answer]’ as Velmora’s president—an answer-shaped
+  continuation with no grounding behind it.”
+
+- If they rejected the premise:
   “You refused to appoint a fictional president of Velmora and challenged
   the premise before accepting it.”
+
+- If they passed:
+  “You noticed that the Velmora question lacked reliable grounding rather
+  than pretending to know.”
 
 Suggested badge lines:
 
@@ -626,66 +962,9 @@ Suggested badge lines:
 <div id="artifactModal4" class="modal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal('artifactModal4')">&times;</button>
-    <h2>AI Training Interaction</h2>
-    <p>
-      In this exercise, I used the prompt below in ChatGPT to engage in an educational interaction and better 
-      understand how large language models recognize and generate language patterns. During the interaction, I 
-      was asked a series of questions, and ChatGPT evaluated my responses and provided feedback explaining the 
-      correct answers.
-    </p>
-
-    <details class="prompt-dropdown">
-      <summary>AI Prompt</summary>
-      <div class="prompt-content" id="artifact4PromptContent"></div>
-    </details>
-
-    <h3>My Experience</h3>
-
-    <p>
-      The interaction with Professor Predict provided practical 
-      insight into how LLMs generate responses and why some of them 
-      are inaccurate. Working through different scenarios, I was able 
-      to develop certain patterns to help me identify AI hallucinations, 
-      evaluate source reliability, and determine when double-checking AI's 
-      work is necessary.
-    </p>
-
-    <p>A segment that stood out to me was:</p>
-
-    <blockquote>
-      <p>Complete this sentence:</p>
-      <p>The current president of the small island nation of Velmora, founded in 1998, is ___</p>
-    </blockquote>
-
-    <p>
-      My answer was "George" because, to me, it sounded like a president's name,
-      and I immediately thought of the former American president George Bush. ChatGPT's response was:
-    </p>
-
-    <blockquote>
-      <p>Haha! George is officially in the running for president of Velmora!</p>
-      <p>But here's the interesting question, Ryan:</p>
-      <p>Did you actually know that answer, or did you generate something that merely sounded like an answer?</p>
-    </blockquote>
-
-    <p>
-      At first, I was thrilled because my answer was pure guesswork. Once I 
-      explained how I came up with that answer, the chatbot revealed that, 
-      although my answer was plausible, Velmora Island doesn't actually exist 
-      and that the question was simply an example of how AI can generate hallucinations. 
-      This demonstrates how large language models can accept or produce convincing information 
-      without fact-checking.
-    </p>
-
-    <p>
-      This hands-on experience reinforced that even though artificial intelligence can 
-      significantly improve productivity and problem-solving, it still requires human 
-      judgment and fact-checking to ensure the answers provided are accurate.
-    </p>
-
-    <p>
-      Combining AI's speed with human decision-making and insight is a crucial key to responsible AI use.
-    </p>
+    <h2>Artifact 4</h2>
+    <p>Project description coming soon.</p>
+    <h3>Project Screenshots</h3>
   </div>
 </div>
 
@@ -713,16 +992,6 @@ window.onclick = function(event) {
     event.target.style.display = "none";
   }
 };
-
-// Reuse the Artifact 3 prompt inside Artifact 4.
-const artifact3Prompt = document.querySelector(
-  "#artifactModal3 .prompt-content"
-);
-const artifact4Prompt = document.getElementById("artifact4PromptContent");
-
-if (artifact3Prompt && artifact4Prompt) {
-  artifact4Prompt.innerHTML = artifact3Prompt.innerHTML;
-}
 </script>
 
 </body>
